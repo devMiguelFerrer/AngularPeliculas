@@ -1,0 +1,41 @@
+<section>
+    <mat-form-field>
+        <input matInput (keyup)="buscar($event.target.value)" placeholder="Buscar">
+    </mat-form-field>
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+    
+            <ng-container matColumnDef="imagen">
+                <th mat-header-cell *matHeaderCellDef> Imagen </th>
+                <td mat-cell *matCellDef="let element">
+                    <img class="mat-elevation-z10 mg-top-56" mat-card-avatar [src]="'http://image.tmdb.org/t/p/w185/'+element.poster_path">
+                </td>
+            </ng-container>
+            
+            <ng-container matColumnDef="nombre">
+                <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+            </ng-container>
+            
+            <ng-container matColumnDef="fecha">
+                <th mat-header-cell *matHeaderCellDef fxHide.xs> Estreno </th>
+                <td mat-cell *matCellDef="let element" fxHide.xs> {{element.release_date}} </td>
+            </ng-container>
+            
+            <ng-container matColumnDef="popularidad">
+                <th mat-header-cell *matHeaderCellDef fxHide.lt-md> Popularidad </th>
+                <td mat-cell *matCellDef="let element" fxHide.lt-md> {{element.popularity}} </td>
+            </ng-container>
+            
+            <ng-container matColumnDef="votos">
+                <th mat-header-cell *matHeaderCellDef fxHide.lt-lg> Votos </th>
+                <td mat-cell *matCellDef="let element" fxHide.lt-lg> {{element.vote_count}} </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+        </table>
+        <mat-paginator [pageSizeOptions]="[10, 20]"></mat-paginator>
+    </div>
+</section>

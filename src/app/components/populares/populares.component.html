@@ -1,0 +1,23 @@
+<section  
+    fxLayout="row wrap" 
+    fxLayout.lt-sm="column"
+    fxLayoutAlign="center">
+        <mat-card 
+            *ngFor="let pelicula of peliculas" 
+            fxFlex.lt-lg="0 1 calc(33%)"
+            fxFlex.lt-md="0 1 calc(50%)"
+            fxFlex.lt-sm="100%">
+                <img mat-card-image [src]="'http://image.tmdb.org/t/p/w342/'+pelicula.backdrop_path">                
+                <mat-card-content fxLayout="row">
+                    <img class="mat-elevation-z10 mg-top-56" mat-card-lg-image [src]="'http://image.tmdb.org/t/p/w185/'+pelicula.poster_path">
+                    <div class=cardInfo>
+                        <p>{{ pelicula.title }}</p>
+                        <p>{{ pelicula.release_date }}</p>
+                        <p><mat-icon aria-hidden="false" aria-label="icon" color="primary">thumb_up</mat-icon>{{ pelicula.vote_average }}</p>
+                    </div>
+                </mat-card-content>
+                <mat-card-footer>
+                    {{ pelicula.overview }}
+                </mat-card-footer>
+        </mat-card>
+</section>
