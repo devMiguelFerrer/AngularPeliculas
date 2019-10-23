@@ -22,5 +22,5 @@ Ejecuta `ng serve` desde dentro del directorio y navega a `http://localhost:4200
 
 ## Build
 
-Ejecuta `ng build --prod` los archivos de produccion seran generados ne la carpeta de `dist/`.
+Ejecuta `ng build --prod` desde dentro del directorio y los archivos de produccion seran generados en la carpeta de `dist/`.
 
