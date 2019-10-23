@@ -1,0 +1,23 @@
+mat-card {
+    min-width: 320px;
+    margin: 0 10px 20px 10px;
+    max-width: 960px;
+}
+img {
+    max-height: 500px;
+}
+mat-card-footer {
+    text-align: justify;
+    margin: 10px;
+    max-width: 100%;
+}
+.mg-top-56 {
+    margin-top: -56px !important;
+}
+mat-icon {
+    font-size: 1rem;
+}
+.cardInfo {
+    margin-top: -20px;
+    margin-left: 10px;
+}

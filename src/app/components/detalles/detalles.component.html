@@ -1,0 +1,17 @@
+<section *ngIf="pelicula != undefined || pelicula != null" fxLayoutAlign="center">
+        <mat-card>
+            <img mat-card-image [src]="'http://image.tmdb.org/t/p/w780/'+pelicula.backdrop_path" onError="this.src='assets/no-image-found.png'">                
+            <mat-card-content fxLayout="row">
+                <img class="mat-elevation-z10 mg-top-56" mat-card-lg-image [src]="'http://image.tmdb.org/t/p/w185/'+pelicula.poster_path" onError="this.src='assets/no-image-found.png'">
+                <div class=cardInfo>
+                    <p>{{ pelicula.title }}</p>
+                    <p>{{ pelicula.release_date }}</p>
+                    <p><mat-icon aria-hidden="false" aria-label="icon" color="primary">thumb_up</mat-icon>{{ pelicula.vote_average }}</p>
+                </div>
+            </mat-card-content>
+            <mat-card-footer>
+                {{ pelicula.overview }}
+            </mat-card-footer>
+        </mat-card>
+</section>
+

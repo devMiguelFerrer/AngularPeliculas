@@ -19,13 +19,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopularesComponent } from './components/populares/populares.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
+import { DetallesComponent } from './components/detalles/detalles.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PopularesComponent,
     HeaderComponent,
-    BuscarComponent
+    BuscarComponent,
+    DetallesComponent
   ],
   imports: [
     BrowserModule,

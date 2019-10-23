@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 
 import { PeliculasService } from 'src/app/services/peliculas.service';
 import { Pelicula } from 'src/app/models/pelicula.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-buscar',
@@ -20,7 +21,7 @@ export class BuscarComponent implements OnInit, OnDestroy {
 
   private peliculasSubscription: Subscription;
 
-  constructor(private peliculasService: PeliculasService) { }
+  constructor(private peliculasService: PeliculasService, private router: Router) { }
 
   ngOnInit() {
     this.buscar('');
@@ -33,6 +34,10 @@ export class BuscarComponent implements OnInit, OnDestroy {
       this.dataSource.paginator = this.paginator;
       this.dataSource.filter = valor.trim().toLocaleLowerCase();
     });
+  }
+
+  detalle(pelicula: Pelicula): void {
+    this.router.navigate(['/detalle', {id: pelicula.id}]);
   }
 
   ngOnDestroy() {

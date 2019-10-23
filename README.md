@@ -1,27 +1,26 @@
-# PeliculasAngular
+# AngularPeliculas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
+Esta web es un ejemplo de SPA que realiza peticiones a la API de [TheMovieDB](https://www.themoviedb.org), tenemos una `toolbar` en la que hay 2 secciones, una para ver las 20 peliculas mas populares del momento y otra con un buscador de peliculas, desde la cual podemos seleccionar una pelicula y ver los detalles de esta.
 
-## Development server
+## Ejemplo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Aqui os dejo un link, [AngularPeliculas](https://mibase-d272d.web.app/) en el que podeis ver la aplicacion en produccion, subida al Host de `Firebase`.
 
-## Code scaffolding
+## Informacion General, Instalaciones y versiones
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Proyecto generado con `Angular-CLI` en la version 8.3.5.
+Tenemos instalado `Angular Material` en la version 8.2.1.
+Hemos añadido el paquete de `Angular/flex-layout` en su version 8.0.0-beta.27.
+
+## Configuracion Necesaria
+
+Solo tienes que poner una `API_KEY` valida en servicio `peliculas.service.ts` ubicado en `src\app\services\peliculas.service.ts`
+
+## Server de Desarrollo
+
+Ejecuta `ng serve` desde dentro del directorio y navega a `http://localhost:4200/`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Ejecuta `ng build --prod` los archivos de produccion seran generados ne la carpeta de `dist/`.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

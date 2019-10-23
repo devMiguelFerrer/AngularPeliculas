@@ -1,7 +1,6 @@
 table {
     width: 100%;
 }
-
 .mat-form-field {
     font-size: 14px;
     width: 100%;
@@ -14,4 +13,7 @@ img {
 }
 section {
     padding: 0 5%;
+}
+td {
+    cursor: pointer;
 }
