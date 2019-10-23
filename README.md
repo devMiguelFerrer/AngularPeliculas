@@ -8,8 +8,8 @@ Aqui os dejo un link, [AngularPeliculas](https://mibase-d272d.web.app/) en el qu
 
 ## Informacion General, Instalaciones y versiones
 
-Proyecto generado con `Angular-CLI` en la version 8.3.5.
-Tenemos instalado `Angular Material` en la version 8.2.1.
+Proyecto generado con `Angular-CLI` en la version 8.3.5.  
+Tenemos instalado `Angular Material` en la version 8.2.1.  
 Hemos añadido el paquete de `Angular/flex-layout` en su version 8.0.0-beta.27.
 
 ## Configuracion Necesaria
